@@ -1,1 +1,203 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FastMods – Minecraft Mod Updater</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="FastMods keeps your Minecraft mods up to date with safe backups, Modrinth integration, and zero telemetry." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner container">
+      <div class="logo">FastMods</div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#download" class="nav-cta">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>FastMods – Safe, fast Minecraft mod updates.</h1>
+          <p>
+            Point FastMods at your <code>/mods</code> folder and let it handle
+            updates, backups, and Modrinth lookups – with zero telemetry and full control.
+          </p>
+
+          <div class="hero-actions" id="download">
+            <a class="btn primary"
+               href="https://github.com/FastMods/mc-mod-updater-home/releases/latest/download/MC.Mod.Updater.zip">
+              Download for Windows
+            </a>
+            <a class="btn ghost"
+               href="https://github.com/FastMods/mc-mod-updater-home">
+              View on GitHub
+            </a>
+          </div>
+
+          <p class="hero-note">
+            No ads · No bloat · Your mods stay on your machine.
+          </p>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="hero-card-body">
+            <p class="mono small">C:\Users\You\.minecraft\mods</p>
+            <ul class="hero-list">
+              <li>✔ Scan installed mods</li>
+              <li>✔ Check Modrinth for compatible updates</li>
+              <li>✔ Stage downloads to a safe folder</li>
+              <li>✔ One-click backup &amp; replace</li>
+              <li>✔ Fabric loader support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+      <div class="container">
+        <h2>Why use FastMods?</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Update without breaking packs</h3>
+            <p>
+              FastMods checks versions against Modrinth and stages new JARs
+              into a separate <code>/downloads</code> folder before touching your live mods.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Automatic backups</h3>
+            <p>
+              Before replacing anything, FastMods creates a timestamped backup
+              of your existing mods so you can roll back if something feels off.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Zero telemetry</h3>
+            <p>
+              No tracking, no analytics. Only a custom User-Agent for Modrinth
+              API compliance and polite throttling. Your usage stays local.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Fabric loader helper</h3>
+            <p>
+              Quickly install Fabric loader and keep required dependencies like
+              Fabric API in sync with your chosen Minecraft version.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Manual mods supported</h3>
+            <p>
+              For mods not on Modrinth, FastMods can stage existing JARs into
+              the downloads set when they match your target version.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Designed for modded players</h3>
+            <p>
+              Built for people running heavier modpacks who want control,
+              safety, and clear feedback instead of launch-and-pray updates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section alt" id="how-it-works">
+      <div class="container">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li>
+            <strong>Point FastMods at your mods folder.</strong>
+            <p>Choose your <code>.minecraft/mods</code> directory and the Minecraft version you’re targeting.</p>
+          </li>
+          <li>
+            <strong>Scan and stage updates.</strong>
+            <p>FastMods checks each mod against Modrinth and stages compatible updates into a separate downloads folder.</p>
+          </li>
+          <li>
+            <strong>Review &amp; replace.</strong>
+            <p>Once you’re happy, use <em>Replace Mods</em> to back up your current mods and swap in the staged set.</p>
+          </li>
+          <li>
+            <strong>Launch and play.</strong>
+            <p>If something fails, restore from the backup folder created automatically before replacement.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>Does FastMods work with CurseForge/other launchers?</h3>
+            <p>
+              FastMods works at the file level: if it can see a <code>/mods</code> folder,
+              it can scan and stage updates. It doesn’t depend on a specific launcher.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What platforms are supported?</h3>
+            <p>
+              The current build targets Windows with a bundled runtime.
+              Other platforms can run the JAR with a compatible Java + JavaFX setup.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Does it upload my mods anywhere?</h3>
+            <p>
+              No. FastMods only talks to Modrinth’s API to find releases.
+              Your local mods and backups never leave your machine.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Where can I report bugs or request features?</h3>
+            <p>
+              Open an issue on the
+              <a href="https://github.com/FastMods/mc-mod-updater-home/issues" target="_blank" rel="noopener">
+                GitHub repo
+              </a>.  
+              Suggestions, bug reports, and weird edge cases are all welcome.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>FastMods · Minecraft Mod Updater</p>
+      <p class="footer-links">
+        <a href="https://github.com/FastMods/mc-mod-updater-home">GitHub</a>
+        <span>·</span>
+        <a href="mailto:fastmods@placeholder.dev">Contact</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
